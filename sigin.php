@@ -89,7 +89,10 @@ $real_insert=mysqli_query($result,$insert);
 if($real_insert){
   $subject='change password change mail';
   $body="click on the link to activate your account:http://localhost/projects/project2/login.php?token=$token" ;
-  $head='From:sminagendra@gmail.com';
+  $head='From:youremail@gmail.com';
+    
+    //you have to change smpt code sendmail file in xammp folder
+    
   $mail=mail($email,$subject,$body,$head);
   if($mail){
     echo 'mail has been sent plese check your email id';
